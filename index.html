@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Bullying | Платформа психологической поддержки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+       <div class="head"><br>Stop Bullying | Платформа психологической поддержки</div>
+       <div class="description"><br>Ты столкнулся с трудностями и тебе тяжело на душе? Тебе не с кем поделиться своими переживаниями и страхами? Кажется, что выхода из ситуации нет? Расскажи о своих переживаниях, чувствах, проблемах. Тебе обязательно протянут руку помощи!</div>
+       <div class="main">* Поля со звёздочками обязательны к заполнению</div><br>
+        <h2>Как Вы себя сегодня чувствуете?*</h2>
+        <div class="rating-panel">
+            <div class="rating-item" onclick="changeColor('circle1', 'Ужасно')">
+                <div class="rating-circle" id="circle1" data-value="Ужасно"></div>
+                <div class="rating-text">Ужасно</div>
+            </div>
+            <div class="rating-item" onclick="changeColor('circle2', 'Плохо')">
+                <div class="rating-circle" id="circle2" data-value="Плохо"></div>
+                <div class="rating-text">Плохо</div>
+            </div>
+            <div class="rating-item" onclick="changeColor('circle3', 'Хорошо')">
+                <div class="rating-circle" id="circle3" data-value="Хорошо"></div>
+                <div class="rating-text">Хорошо</div>
+            </div>
+            <div class="rating-item" onclick="changeColor('circle4', 'Отлично')">
+                <div class="rating-circle" id="circle4" data-value="Отлично"></div>
+                <div class="rating-text">Отлично</div>
+            </div>
+        </div>
+        <div id="CircleError" class="error-message"></div>
+        <div>
+            <input type="text" id="messageInput" placeholder="Опишите ваше состояние...*">
+            <div id="messageError" class="error-message"></div>
+        </div>
+        <div>
+            <input type="text" id="phoneInput" placeholder="Введите номер телефона...*">
+            <div id="phoneError" class="error-message"></div>
+            <div id="NumberError" class="error-message"></div>
+        </div><br>
+        <div>
+            <label for="anonymousRadio">Отправить анонимно:</label>
+            <input type="checkbox" id="anonymousRadio" onclick="togglePhoneInput()">
+        </div><br>
+        <button onclick="sendMessage()">Отправить</button>
+        <footer><img src="stop_page_logo.png" align="middle" width="300px" ></footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
